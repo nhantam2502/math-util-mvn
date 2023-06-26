@@ -28,7 +28,7 @@ public class MathUtilityAdvancedTest {
                                {1, 1},
                                {2, 2},
                                {4, 24},
-                               {5, 120}
+                               {5, 1200}
                               };
         return testData;
     }
@@ -55,4 +55,8 @@ public class MathUtilityAdvancedTest {
     //  TDD trong đó việc viết code test đc tách riêng ra so với test data
     //  nghĩa là bộ dữ liệu test thường đc đặt để ở 1 mảng 2 chiều
     //  hoặc để ở table, file txt, Excel sau đó đc nhồi/fill/map vào trong câu lệnh kiểm thử
+    //  Việc data tách riêng ra, sau đó fill trở lại hàm so sánh qua tên biến
+    //  THÌ DDT CÒN ĐC GỌI LÀ Parameterized Test
+    
+    // integrated development environment
 }
