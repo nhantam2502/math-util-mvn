@@ -21,6 +21,20 @@ public class MathUtility {
     // hàm chỉ cho phép n = 0..20
     // đưa n > 20: NÉM NGOẠI LỆ
     
+//    public static long getFactorial(int n){
+//        if(n < 0 || n > 20)
+//            throw new IllegalArgumentException("Invalid n. n must be between 0..20, plz");
+//                    
+//        if(n == 0 || n == 1)
+//            return 1;
+//        
+//        long product = 1; // biến gom tích nhân với nhau
+//        for (int i = 2; i <= n; i++) 
+//            product *= i;
+//        
+//        return product;
+//    }
+    
     public static long getFactorial(int n){
         if(n < 0 || n > 20)
             throw new IllegalArgumentException("Invalid n. n must be between 0..20, plz");
@@ -28,11 +42,13 @@ public class MathUtility {
         if(n == 0 || n == 1)
             return 1;
         
-        long product = 1; // biến gom tích nhân với nhau
-        for (int i = 2; i <= n; i++) 
-            product *= i;
-        
-        return product;
-    }
-    
+        return n * getFactorial(n -1); // đệ quy recursion 
+    } 
 }
+
+//5! = 1.2.3.4.5 = 4! x 5 = 5 x 4!
+//4! = 4 x 3!
+//3! = 3 x 2!
+//2! = 2 x 1!
+//1! = 1; Dừng
+//N! = N x (N - 1)
